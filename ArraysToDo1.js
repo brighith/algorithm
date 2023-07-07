@@ -61,6 +61,17 @@ console.log(insertAt([9, 33, 7], 1, 42));
 // Examples:
 // removeAt([1000,3,204,77], 1) => 3 returned, with [1000,204,77] printed in the function
 // removeAt([8,20,55,44,98], 3) => 44 returned, with [8,20,55,98] printed in the function
+function removeAt(arr, idx) {
+  var newarr = [];
+
+  for (i = 0; i <= arr.length - 1; i++) {
+    if (i === idx) continue;
+    newarr.push(arr[i]);
+  }
+  return newarr;
+}
+console.log(removeAt([1000, 3, 204, 77], 1));
+console.log(removeAt([8, 20, 55, 44, 98], 3));
 
 // BONUS: Swap Pairs
 // Swap positions of successive pairs of values of given array.
@@ -91,9 +102,26 @@ console.log(insertAt([1, 2, 3, 4]));
 console.log(insertAt(["Brendan", true, 42]));
 
 // BONUS: Remove Duplicates
-// Given a sorted array, remove duplicate values. Because array elements are already in order, all duplicate values will be grouped together. If you already made the Remove At function, you are welcome to use that! If you solved this using nested loops, for an extra challenge, try to do it without any nested loops!
+// Given a sorted array, remove duplicate values.
+//  Because array elements are already in order,
+//  all duplicate values will be grouped together.
+//   If you already made the Remove At function,
+//    you are welcome to use that! If you solved this using nested loops,
+//    for an extra challenge, try to do it without any nested loops!
 
 // Examples:
 
 // removeDupes([-2,-2,3.14,5,5,10]) => [-2,3.14,5,10]
 // removeDupes([9,19,19,19,19,19,29]) => [9,19,29]
+
+function removeDupes(arr) {
+  var newarr = [arr[0]];
+  for (i = 1; i <= arr.length - 1; i++) {
+    if (newarr.includes(arr[i])) continue;
+    newarr.push(arr[i]);
+  }
+  return newarr;
+}
+
+console.log(removeDupes([-2, -2, 3.14, 5, 5, 10]));
+console.log(removeDupes([9, 19, 19, 19, 19, 19, 29]));
