@@ -20,3 +20,26 @@ function rotateArr(arr, shiftBy) {
   return arr;
 }
 console.log(rotateArr([1, 2, 3, 4, 5, 6, 7], 1));
+
+// Filter Range
+function filterRange(arr, max, min) {
+  for (i = 0; i <= arr.length - 1; i++) {
+    if (arr[i] >= max) delete arr[i];
+    else if (arr[i] <= min) {
+      delete arr[i];
+    }
+  }
+
+  return arr;
+}
+
+console.log(filterRange([1, 2, 3, 4, 5, 78, 45, 23, 12, 90, 100], 89, 2));
+
+// Concat
+function arrConcat(arr1, arr2) {
+  var arr = [];
+  arr = arr1.concat(arr2);
+  return arr;
+}
+
+console.log(arrConcat(["c", "b"], [4, 5, 6]));
