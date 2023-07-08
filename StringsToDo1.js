@@ -57,7 +57,6 @@ console.log(countNonSpaces("Hello world !"));
 
 // Remove Shorter Strings
 function removeShorterStrings(string, num) {
-  //   var splitString = string.split("");
   var result = [];
   for (i = 0; i <= string.length - 1; i++) {
     if (string[i].length >= num) {
