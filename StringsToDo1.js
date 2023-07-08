@@ -54,3 +54,24 @@ function countNonSpaces(sentence) {
 }
 console.log(countNonSpaces("Honey pie, you are driving me crazy"));
 console.log(countNonSpaces("Hello world !"));
+
+// Remove Shorter Strings
+function removeShorterStrings(string, num) {
+  //   var splitString = string.split("");
+  var result = [];
+  for (i = 0; i <= string.length - 1; i++) {
+    if (string[i].length >= num) {
+      result.push(string[i]);
+    }
+  }
+  return result;
+}
+console.log(
+  removeShorterStrings(
+    ["Good morning", "sunshine", "the", "Earth", "says", "hello"],
+    4
+  )
+);
+console.log(
+  removeShorterStrings(["There", "is", "a", "bug", "in", "the", "system"], 3)
+);
