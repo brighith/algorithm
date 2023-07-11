@@ -47,3 +47,5 @@ SLL1.removeFront();
 console.log(SLL1.front());
 SLL1.removeFront();
 console.log(SLL1.front());
+SLL1.removeFront();
+console.log(SLL1);
