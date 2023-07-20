@@ -103,19 +103,19 @@ class SLL{
 
 
 SLL1 = new SLL();
-SLL1.addFront(18);
-SLL1.addFront(5);
-SLL1.addFront(73);
+SLL1.addFront(23);
+SLL1.addFront(9);
+SLL1.addFront(99);
 console.log(SLL1);
 console.log(SLL1.front());
 SLL1.removeFront();
 console.log(SLL1.front());
 SLL1.removeFront();
 console.log(SLL1.front());
-console.log(SLL1.contains(18));
-console.log(SLL1.contains(5));
+console.log(SLL1.contains(23));
+console.log(SLL1.contains(9));
 console.log(SLL1.length());
-SLL1.addFront(420);
+SLL1.addFront(530);
 console.log(SLL1.length());
 console.log(SLL1.display());
 console.log(SLL1.max());
