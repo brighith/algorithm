@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Marks</title>
+  </head>
+  <body>
+    <h1>Student Marks</h1>
+    <form action="{% url 'app:result_view'  %}" method="POST">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <th>Student Name</th>
+          <th>Mark</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+          <td>{{ student_name }}</td>
+          <td>
+            <input
+              type="number"
+              name="mark_{{ student_id }}"
+              step="0.01"
+              min="0"
+              max="100"
+              required
+            />
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
