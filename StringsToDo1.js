@@ -15,7 +15,7 @@ console.log(removeBlanks(" Pl ayTha tF u nkyM usi c "));
 // Get Digits
 function getDigits(input) {
   var digits = "";
-  for (i = 1; i <= input.length; i++) {
+  for (i = 0; i <= input.length; i++) {
     if (isNaN(input[i])) {
       continue;
     } else {
